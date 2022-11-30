@@ -18,10 +18,62 @@
 	{
 		alert("Mouse Out");
 	}
+	
+	function keypress()
+	{
+		alert("Key Press");
+	}
+	
+	function keyup()
+	{
+		alert("Key Up");
+	}
+	
+	function myFunction()
+	{
+		alert("On Focus");
+	}
+	
+	function blurevent()
+	{
+		alert("On Blur");
+	}
+	
+	function loading()
+	{
+		alert("Page is Loaded");
+	}
+	
+	function myFunction1()
+	{
+		alert("Change Event");
+	}
+	
+	function myFunction2()
+	{
+		alert("Submit Event");
+	}
+	
+	function myFunction3()
+	{
+		alert("Reset Event");
+	}
 </script>
-<form>
-	<input type="button" onclick="singleclick()" value="Click"><br>
-	<input type="button" ondblclick="doubleclick()" value="Double Click"><br>
-	<input type="button" onmouseover="mouseover()" value="Mouse Over"><br>
-	<input type="button" onmouseout="mouseout()" value="Mouse Out"><br>
-</form>
+<body onload="loading()">
+	<form action="demo.html" onsubmit="myFunction2()" onreset="myFunction3()">
+		<input type="button" onclick="singleclick()" value="Click"><br>
+		<input type="button" ondblclick="doubleclick()" value="Double Click"><br>
+		<input type="button" onmouseover="mouseover()" value="Mouse Over"><br>
+		<input type="button" onmouseout="mouseout()" value="Mouse Out"><br>
+		<input type="text" onkeypress="keypress()"><br>
+		<input type="text" onkeyup="keyup()"><br>
+		<input type="text" onfocus="myFunction()"><br>
+		<input type="text" onblur="blurevent()"><br>
+		<select onchange="myFunction1()">
+			<option>BMW</option>
+			<option>AUDI</option>
+		</select><br>
+		<input type="submit" value="Save">
+		<input type="reset" value="Clear">
+	</form>
+</body>
